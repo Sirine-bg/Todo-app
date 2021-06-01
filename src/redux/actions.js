@@ -1,7 +1,7 @@
 export const ADD_TODO = "ADD_TODO";
-export const DELETE_TODO = "DELETE_TODO";
-export const UPDATE_TODO = "UPDATE_TODO";
 export const FILTER_TODO = "FILTER_TODO";
+export const UPDATE_TODO = "UPDATE_TODO";
+
 
 
 export function addTodo(todo) {
@@ -11,10 +11,10 @@ export function addTodo(todo) {
     }
 }
 
-export function deleteTodo(todoId) {
+export function filterTodo(todo) {
     return {
-        type:DELETE_TODO,
-        payload: todoId,
+        type:FILTER_TODO,
+        payload: todo,
     }
 }
 
@@ -22,12 +22,6 @@ export function deleteTodo(todoId) {
 export function updateTodo(todo) {
     return {
         type:UPDATE_TODO,
-        payload: todo,
-    }
-}
-export function filterTodo(todo) {
-    return {
-        type:FILTER_TODO,
         payload: todo,
     }
 }
